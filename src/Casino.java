@@ -3,7 +3,6 @@ import java.util.Scanner;
 public class Casino {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Gamble game = new Gamble(50);
 		Scanner sc = new Scanner(System.in);
 		String str;
@@ -15,10 +14,10 @@ public class Casino {
 				// 'tail' is true and 'head' is false
 				boolean bet = (str.equals("0"))?false:true;
 				if(game.bet(bet)){
-					if(game.hasWon()){
-						game.giveMoney(1);
+					if(game.has_won()){
+						game.give_money(1);
 					}else{
-						game.recoverMoney(1);
+						game.recover_money(1);
 					}					
 				}
 				System.out.println(game);
